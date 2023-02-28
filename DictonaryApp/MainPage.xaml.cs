@@ -1,4 +1,7 @@
-﻿namespace DictonaryApp;
+﻿using DictonaryApp.Resources.Localization;
+using System.Globalization;
+
+namespace DictonaryApp;
 
 public partial class MainPage : ContentPage
 {
@@ -9,6 +12,11 @@ public partial class MainPage : ContentPage
 		count = Preferences.Get("MainPage.number_count", 0);
 		InitializeComponent();
         UpdateClickMeButtonText();
+        if (Preferences.ContainsKey("App.Language") && Preferences.Get("App.Language", LanguageManager.AvaliableLanguages[0].Code) != Thread.CurrentThread.CurrentCulture.TwoLetterISOLanguageName)
+        {
+            LocalizationResourceManager.Instance.SetCulture(new CultureInfo(Preferences.Get("App.Language", LanguageManager.AvaliableLanguages[0].Code)));
+        }
+
     }
 
 	private void OnCounterClicked(object sender, EventArgs e)
@@ -18,7 +26,12 @@ public partial class MainPage : ContentPage
         UpdateClickMeButtonText();
     }
 
-	private void UpdateClickMeButtonText()
+    private async void OnDestSettingsClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new SettingsPage());
+    }
+
+    private void UpdateClickMeButtonText()
 	{
         if (count == 0)
             CounterBtn.Text = "Click me";
