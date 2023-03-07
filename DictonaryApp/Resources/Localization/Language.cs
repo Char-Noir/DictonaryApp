@@ -11,5 +11,7 @@ namespace DictonaryApp.Resources.Localization
         public required string Name { get; init; }
         public required string Code { get; init; }
 
+        
+
     }
 }

@@ -11,8 +11,8 @@ namespace DictonaryApp.Resources.Localization
     {
         public static IList<Language> AvaliableLanguages { get; } =  new List<Language>()
         {
-            new Language() { Name = "English", Code = "en" },
-            new Language() { Name = "Українська", Code = "uk" }
+            LocalizationLanguage.ENGLISH,
+            LocalizationLanguage.UKRAINIAN
         };
 
         public static bool IsLanguageAvaliable(string language)
