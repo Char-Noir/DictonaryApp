@@ -1,12 +1,17 @@
-﻿namespace DictonaryApp;
+﻿
+
+using DictonaryApp.Repositories;
+
+namespace DictonaryApp;
 
 public partial class App : Application
 {
-	public App()
+    public static DictionaryRepository DictionaryRepo { get; private set; }
+    public App(DictionaryRepository repo)
 	{
 		InitializeComponent();
-
-		MainPage = new NavigationPage(new MainPage());
+        DictionaryRepo = repo;
+        MainPage = new NavigationPage(new MainPage());
     }
 
 
