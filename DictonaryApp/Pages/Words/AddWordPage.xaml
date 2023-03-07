@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DictonaryApp.Pages.Words.AddWordPage"
+             xmlns:localization="clr-namespace:DictonaryApp.Resources.Localization" 
+             Title="{localization:Translate AddWord_Title}">
+    <VerticalStackLayout Margin="30,30">
+        <Label
+                Text="{localization:Translate AddWord_Name}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+        <VerticalStackLayout>
+            
+            <Label
+                Margin="10"
+                Text=""
+                x:Name="LanguageFrom"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Editor x:Name="TextFrom" AutoSize ="TextChanges" FontAutoScalingEnabled="True" Placeholder="{localization:Translate AddWord_Languages_From}"></Editor>
+        </VerticalStackLayout>
+        <VerticalStackLayout>
+            
+            <Label
+                Margin="10"
+                Text=""
+                x:Name="LanguageTo"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Editor x:Name="TextTo" AutoSize ="TextChanges" FontAutoScalingEnabled="True" Placeholder="{localization:Translate AddWord_Languages_To}"></Editor>
+        </VerticalStackLayout>
+        <Label
+                Text="{localization:Translate AddWord_Error_EmptyText}"
+                TextColor="IndianRed"
+                FontSize="15"
+                x:Name="ErrorLine"
+                SemanticProperties.HeadingLevel="Level5"
+                
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="SettingsBtn"
+                Text="{localization:Translate AddWord}"
+                SemanticProperties.Hint="{localization:Translate AddWord_Hint}"
+                Clicked="OnCreateClicked"
+                SemanticProperties.HeadingLevel="Level2"
+                HorizontalOptions="Center"
+                />
+    </VerticalStackLayout>
+</ContentPage>
