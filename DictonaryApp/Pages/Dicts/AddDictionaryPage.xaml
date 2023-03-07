@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DictonaryApp.AddDictionary"
+              xmlns:localization="clr-namespace:DictonaryApp.Resources.Localization" 
+             Title="{localization:Translate AddDictionary_Title}">
+    <VerticalStackLayout>
+        <Label
+                Text="{localization:Translate AddDictionary_Name}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+        <Entry 
+            x:Name="dictionaryName"
+            Placeholder="{localization:Translate AddDictionary_Name_Placeholder}"
+            MaxLength="32"
+            HorizontalOptions="Center"
+               />
+        <Label
+                Text="{localization:Translate AddDictionary_Languages}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label
+                Margin="10"
+                Text="{localization:Translate AddDictionary_Languages_From}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Picker x:Name="LanguageFrom"
+					SelectedIndexChanged="LanguageChanged"
+			        HorizontalOptions="Center" 
+                    ItemsSource="{Binding Languages}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndex ="28"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+            <Label
+                Margin="10"
+                Text="{localization:Translate AddDictionary_Languages_To}"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Picker x:Name="LanguageTo"
+					SelectedIndexChanged="LanguageChanged"
+			        HorizontalOptions="Center" 
+                    ItemsSource="{Binding Languages}"
+                    ItemDisplayBinding="{Binding Name}"
+                    SelectedIndex="5"/>
+        </StackLayout>
+       
+        <Label
+                Text="{localization:Translate AddDictionary_Error_LanguageEquals}"
+                TextColor="IndianRed"
+                FontSize="15"
+                x:Name="ErrorLine"
+                SemanticProperties.HeadingLevel="Level5"
+                
+                HorizontalOptions="Center" />
+        <Button
+                x:Name="SettingsBtn"
+                Text="{localization:Translate CreateDictionary}"
+                SemanticProperties.Hint="{localization:Translate CreateDictionary_Hint}"
+                Clicked="OnCreateClicked"
+                SemanticProperties.HeadingLevel="Level2"
+                HorizontalOptions="Center"
+                />
+        
+    </VerticalStackLayout>
+</ContentPage>
