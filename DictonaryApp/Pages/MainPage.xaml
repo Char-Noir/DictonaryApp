@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:localization="clr-namespace:DictonaryApp.Resources.Localization" 
+             x:Class="DictonaryApp.MainPage">
+    <StackLayout Margin="20, 20, 20, 20">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+            <ImageButton
+                x:Name="SettingsBtn"
+                Source="settings.png"
+                SemanticProperties.Hint="{localization:Translate Settings_DestinationBtn_Hint}"
+                Clicked="OnDestSettingsClicked"
+                HorizontalOptions="StartAndExpand" 
+                HeightRequest="60"
+                WidthRequest="60"
+                />
+            <ImageButton
+                x:Name="AddBtn"
+                Source="add.png"
+                SemanticProperties.Hint="{localization:Translate AddDictionary_DestinationBtn_Hint}"
+                Clicked="OnDestAddDictionaryClicked"
+                HorizontalOptions="EndAndExpand" 
+                HeightRequest="60"
+                WidthRequest="60"
+                />
+        </StackLayout>
+        
+        <ScrollView Margin="0,25">
+            <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="StartAndExpand">
+
+                <CollectionView x:Name="dictionaryList" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Button Margin="0,7" Text ="{Binding Result}" Clicked="OnDictOpenClick">
+                            </Button>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </StackLayout>
+    
+
+</ContentPage>
