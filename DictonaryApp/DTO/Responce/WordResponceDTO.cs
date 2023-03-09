@@ -11,6 +11,7 @@ namespace DictonaryApp.DTO.Responce
         public int Id { get; init; }
         public string WordFrom { get; init; }
         public string WordTo { get; init; }
+        public int IdDictionary { get; init; }
         public string Result
         {
             get
