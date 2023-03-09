@@ -2,6 +2,7 @@ using DictonaryApp.DTO.Responce;
 using DictonaryApp.Pages.Dicts;
 using DictonaryApp.Pages.Learning;
 using DictonaryApp.Pages.Words;
+using DictonaryApp.Resources.Localization;
 
 namespace DictonaryApp;
 
@@ -32,9 +33,17 @@ public partial class OneDictionaryPage : ContentPage
     {
         await Navigation.PushAsync(new LearningPage(IdDictionary));
     }
-    private async void OnQuizCLicked(object sender, EventArgs e)
+    private async void OnQuizBothCLicked(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new QuizPage(IdDictionary));
+        await Navigation.PushAsync(new QuizPage(IdDictionary,Models.LocalModels.QuizMode.Both));
+    }
+    private async void OnQuizStraightCLicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new QuizPage(IdDictionary, Models.LocalModels.QuizMode.Straight));
+    }
+    private async void OnQuizReverseCLicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new QuizPage(IdDictionary, Models.LocalModels.QuizMode.Reversed));
     }
 
     protected async override void OnAppearing()
@@ -46,6 +55,8 @@ public partial class OneDictionaryPage : ContentPage
             await Navigation.PopToRootAsync();
         }
         Title = OneDictionarie.Name;
+        QuizStraight.Text = AppRes.quiz_title  + " (" + OneDictionarie.LanguageFrom + " => " + OneDictionarie.LanguageTo +")";
+        QuizReverse.Text = AppRes.quiz_title + " (" + OneDictionarie.LanguageTo + " => " + OneDictionarie.LanguageFrom + ")";
     }
 
 }

@@ -394,6 +394,15 @@ namespace DictonaryApp.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Quiz (Both).
+        /// </summary>
+        internal static string quiz_btn {
+            get {
+                return ResourceManager.GetString("quiz_btn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Your finished this quiz.
         /// </summary>
         internal static string quiz_end {

@@ -229,6 +229,9 @@
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
+  <data name="quiz_btn" xml:space="preserve">
+    <value>Quiz (Both)</value>
+  </data>
   <data name="quiz_end" xml:space="preserve">
     <value>Your finished this quiz</value>
   </data>

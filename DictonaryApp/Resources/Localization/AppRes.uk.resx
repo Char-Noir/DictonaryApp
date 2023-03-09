@@ -232,6 +232,9 @@
   <data name="No" xml:space="preserve">
     <value>Ні</value>
   </data>
+  <data name="quiz_btn" xml:space="preserve">
+    <value>Вікторина (Обидва)</value>
+  </data>
   <data name="quiz_end" xml:space="preserve">
     <value>Ви завершили цю вікторину</value>
   </data>

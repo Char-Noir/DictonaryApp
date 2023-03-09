@@ -13,11 +13,13 @@ public partial class QuizPage : ContentPage
     public int IdDictionary;
     public ObservableCollection<QuizItem> Qiuz = new ObservableCollection<QuizItem>();
     public int CurrentIndex = 0;
-    public QuizPage(int id)
+    public QuizMode Mode;
+    public QuizPage(int id, QuizMode mode)
 	{
         IdDictionary = id;
         InitializeComponent();
         Initialize();
+        Mode = mode;
         Qiuz.CollectionChanged += OnCollectionChanged;
     }
     void OnCollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
@@ -38,8 +40,16 @@ public partial class QuizPage : ContentPage
         List<QuizItem> items = new();
         foreach (var word in words)
         {
-            items.Add(new QuizItem { Answer = word.WordFrom, Question = word.WordTo, AnswerLanguage = languageFrom, QuestionLanguage = languageTo });
-            items.Add(new QuizItem { Answer = word.WordTo, Question = word.WordFrom, AnswerLanguage = languageTo, QuestionLanguage = languageFrom });
+            if(Mode == QuizMode.Straight || Mode == QuizMode.Both)
+            {
+                items.Add(new QuizItem { Answer = word.WordTo, Question = word.WordFrom, AnswerLanguage = languageTo, QuestionLanguage = languageFrom });
+            }
+            if(Mode == QuizMode.Reversed || Mode == QuizMode.Both)
+            {
+                items.Add(new QuizItem { Answer = word.WordFrom, Question = word.WordTo, AnswerLanguage = languageFrom, QuestionLanguage = languageTo });
+            }
+           
+           
         }
 
         items.Shuffle();
