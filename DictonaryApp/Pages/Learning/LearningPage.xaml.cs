@@ -49,12 +49,12 @@ public partial class LearningPage : ContentPage
         RightBtn.IsEnabled = CurrentIndex<Words.Count-1;
     }
 
-	private async void OnLeftClicked(object sender, EventArgs e)
+	private  void OnLeftClicked(object sender, EventArgs e)
 	{
         CurrentIndex--;
         ShowWord();
 	}
-    private async void OnRightClicked(object sender, EventArgs e)
+    private  void OnRightClicked(object sender, EventArgs e)
     {
         CurrentIndex++;
         ShowWord();
