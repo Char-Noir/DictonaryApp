@@ -34,7 +34,7 @@
             Padding="30,0"
             VerticalOptions="StartAndExpand">
                 <Button Clicked="OnListWordsCLicked" Text="{localization:Translate ListOfWords}"></Button>
-                
+                <Button Clicked="OnLearningCLicked" Text="{localization:Translate Learning_Button}"></Button>
 
             </VerticalStackLayout>
         </ScrollView>

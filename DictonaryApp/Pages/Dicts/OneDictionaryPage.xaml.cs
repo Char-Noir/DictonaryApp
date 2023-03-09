@@ -1,5 +1,6 @@
 using DictonaryApp.DTO.Responce;
 using DictonaryApp.Pages.Dicts;
+using DictonaryApp.Pages.Learning;
 using DictonaryApp.Pages.Words;
 
 namespace DictonaryApp;
@@ -26,6 +27,10 @@ public partial class OneDictionaryPage : ContentPage
     private async void OnListWordsCLicked(object sender, EventArgs e)
     {
         await Navigation.PushAsync(new ListWords(IdDictionary));
+    }
+    private async void OnLearningCLicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new LearningPage(IdDictionary));
     }
     
     protected async override void OnAppearing()
