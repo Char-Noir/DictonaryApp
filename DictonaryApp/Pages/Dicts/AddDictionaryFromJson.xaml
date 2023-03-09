@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DictonaryApp.Pages.Dicts.AddDictionaryFromJson"
+             xmlns:localization="clr-namespace:DictonaryApp.Resources.Localization" 
+             Title="{localization:Translate AddDictionary_Title}">
+    <VerticalStackLayout>
+        <Editor HeightRequest="600" x:Name="DictText" AutoSize ="TextChanges" FontAutoScalingEnabled="True" Placeholder="{localization:Translate AddDictionary_Title}"></Editor>
+        <Button
+                x:Name="SettingsBtn"
+                Text="{localization:Translate CreateDictionary}"
+                SemanticProperties.Hint="{localization:Translate CreateDictionary_Hint}"
+                Clicked="OnCreateClicked"
+                SemanticProperties.HeadingLevel="Level2"
+                HorizontalOptions="Center"
+                />
+    </VerticalStackLayout>
+</ContentPage>

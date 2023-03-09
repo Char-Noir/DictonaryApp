@@ -1,3 +1,4 @@
+using DictonaryApp.Pages.Dicts;
 using DictonaryApp.Translation;
 using System.Globalization;
 
@@ -28,7 +29,10 @@ public partial class AddDictionary : ContentPage
             ErrorLine.Opacity = 0;
         }
     }
-
+     private async void OnJsonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new AddDictionaryFromJson());
+    }
     private async void OnCreateClicked(object sender, EventArgs e)
     {
         

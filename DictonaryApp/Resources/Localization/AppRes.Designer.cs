@@ -133,6 +133,15 @@ namespace DictonaryApp.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add from json.
+        /// </summary>
+        internal static string AddJson {
+            get {
+                return ResourceManager.GetString("AddJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add.
         /// </summary>
         internal static string AddWord {
@@ -417,6 +426,15 @@ namespace DictonaryApp.Resources.Localization {
         internal static string quiz_title {
             get {
                 return ResourceManager.GetString("quiz_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save (Json).
+        /// </summary>
+        internal static string SaveToJson {
+            get {
+                return ResourceManager.GetString("SaveToJson", resourceCulture);
             }
         }
         

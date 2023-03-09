@@ -58,7 +58,7 @@
                 SemanticProperties.HeadingLevel="Level5"
                 
                 HorizontalOptions="Center" />
-        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="50">
+        <StackLayout  HorizontalOptions="Center" >
             <Button
                 x:Name="BackBtn"
                 Text="{localization:Translate Back}"
@@ -75,7 +75,13 @@
                 SemanticProperties.HeadingLevel="Level2"
                 HorizontalOptions="Center"
                 />
-            
+            <Button
+                Text="{localization:Translate SaveToJson}"
+                SemanticProperties.Hint="{localization:Translate Back_Hint}"
+                Clicked="OnJsonClicked"
+                SemanticProperties.HeadingLevel="Level2"
+                HorizontalOptions="Center"
+                />
             <Button
                 x:Name="DeleteBtn"
                 Text="{localization:Translate Delete_dict}"

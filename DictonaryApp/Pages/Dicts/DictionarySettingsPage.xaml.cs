@@ -3,6 +3,7 @@ using DictonaryApp.Resources.Localization;
 using DictonaryApp.Translation;
 using Microsoft.Maui.Controls.Platform;
 using System.Collections;
+using static DictonaryApp.Helpers.JsonHelper;
 
 namespace DictonaryApp.Pages.Dicts;
 
@@ -83,6 +84,10 @@ public partial class DictionarySettingsPage : ContentPage
         }
         
         await Navigation.PopModalAsync();
+    }
+    private async void OnJsonClicked(object sender, EventArgs e)
+    {
+        await Navigation.PushModalAsync(new ShowJsonPage(IdDictionary));
     }
     private async void OnDeleteClicked(object sender, EventArgs e)
     {

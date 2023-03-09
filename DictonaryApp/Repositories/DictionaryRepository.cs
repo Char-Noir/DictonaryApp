@@ -296,5 +296,17 @@ namespace DictonaryApp.Repositories
                 StatusMessage = string.Format("Failed to delete {0}. Error: {1}", id, ex.Message);
             }
         }
+
+        internal async void AddDictionaryFromJson(DictionaryRequestDTO dictionary, List<WordRequestDTO> words)
+        {
+            await AddNewDictionary(dictionary);
+            var IdDictionary = (await conn.Table<DictionaryModel>().ToListAsync()).Last().Id;
+            words.ForEach(word => word.IdDictionary =  IdDictionary);
+            foreach (var word in words)
+            {
+                await AddNewWordToDictionary(word);
+            }
+
+        }
     }
 }

@@ -142,6 +142,9 @@
     <value>Створити новий словник</value>
     <comment>Title for page, which creates new dictionary</comment>
   </data>
+  <data name="AddJson" xml:space="preserve">
+    <value>Додати з JSON</value>
+  </data>
   <data name="AddWord" xml:space="preserve">
     <value>Додати</value>
   </data>
@@ -240,6 +243,9 @@
   </data>
   <data name="quiz_title" xml:space="preserve">
     <value>Вікторина</value>
+  </data>
+  <data name="SaveToJson" xml:space="preserve">
+    <value>Зберегти (JSON)</value>
   </data>
   <data name="score" xml:space="preserve">
     <value>Бали : {0}</value>

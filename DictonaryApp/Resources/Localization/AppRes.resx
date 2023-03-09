@@ -142,6 +142,9 @@
     <value>Add New Dictionary</value>
     <comment>Title for page, which creates new dictionary</comment>
   </data>
+  <data name="AddJson" xml:space="preserve">
+    <value>Add from json</value>
+  </data>
   <data name="AddWord" xml:space="preserve">
     <value>Add</value>
   </data>
@@ -237,6 +240,9 @@
   </data>
   <data name="quiz_title" xml:space="preserve">
     <value>Quiz</value>
+  </data>
+  <data name="SaveToJson" xml:space="preserve">
+    <value>Save (Json)</value>
   </data>
   <data name="score" xml:space="preserve">
     <value>Score: {0}</value>
