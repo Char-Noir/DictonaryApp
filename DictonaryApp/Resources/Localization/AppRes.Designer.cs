@@ -331,6 +331,15 @@ namespace DictonaryApp.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to End.
+        /// </summary>
+        internal static string end_btn {
+            get {
+                return ResourceManager.GetString("end_btn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Learning.
         /// </summary>
         internal static string Learning_Button {
@@ -367,11 +376,56 @@ namespace DictonaryApp.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Next.
+        /// </summary>
+        internal static string next_btn {
+            get {
+                return ResourceManager.GetString("next_btn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string No {
             get {
                 return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your finished this quiz.
+        /// </summary>
+        internal static string quiz_end {
+            get {
+                return ResourceManager.GetString("quiz_end", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quiz.
+        /// </summary>
+        internal static string quiz_title {
+            get {
+                return ResourceManager.GetString("quiz_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Score: {0}.
+        /// </summary>
+        internal static string score {
+            get {
+                return ResourceManager.GetString("score", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Your score is {0}\{1}! Congrats!.
+        /// </summary>
+        internal static string score_result {
+            get {
+                return ResourceManager.GetString("score_result", resourceCulture);
             }
         }
         

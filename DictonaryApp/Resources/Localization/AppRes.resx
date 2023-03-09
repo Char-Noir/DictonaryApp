@@ -208,6 +208,9 @@
   <data name="EditWord_Title" xml:space="preserve">
     <value>Edit word</value>
   </data>
+  <data name="end_btn" xml:space="preserve">
+    <value>End</value>
+  </data>
   <data name="Learning_Button" xml:space="preserve">
     <value>Learning</value>
   </data>
@@ -220,8 +223,23 @@
   <data name="ListOfWords_title" xml:space="preserve">
     <value>List of words</value>
   </data>
+  <data name="next_btn" xml:space="preserve">
+    <value>Next</value>
+  </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
+  </data>
+  <data name="quiz_end" xml:space="preserve">
+    <value>Your finished this quiz</value>
+  </data>
+  <data name="quiz_title" xml:space="preserve">
+    <value>Quiz</value>
+  </data>
+  <data name="score" xml:space="preserve">
+    <value>Score: {0}</value>
+  </data>
+  <data name="score_result" xml:space="preserve">
+    <value>Your score is {0}\{1}! Congrats!</value>
   </data>
   <data name="Settings_DestinationBtn_Hint" xml:space="preserve">
     <value>Directs to the application settings</value>

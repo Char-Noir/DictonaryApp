@@ -211,6 +211,9 @@
   <data name="EditWord_Title" xml:space="preserve">
     <value>Редагувати слово</value>
   </data>
+  <data name="end_btn" xml:space="preserve">
+    <value>Закінчити</value>
+  </data>
   <data name="Learning_Button" xml:space="preserve">
     <value>Вивчення</value>
   </data>
@@ -223,8 +226,23 @@
   <data name="ListOfWords_title" xml:space="preserve">
     <value>Список слів</value>
   </data>
+  <data name="next_btn" xml:space="preserve">
+    <value>Далі</value>
+  </data>
   <data name="No" xml:space="preserve">
     <value>Ні</value>
+  </data>
+  <data name="quiz_end" xml:space="preserve">
+    <value>Ви завершили цю вікторину</value>
+  </data>
+  <data name="quiz_title" xml:space="preserve">
+    <value>Вікторина</value>
+  </data>
+  <data name="score" xml:space="preserve">
+    <value>Бали : {0}</value>
+  </data>
+  <data name="score_result" xml:space="preserve">
+    <value>Ваші бали {0} з {1}! Ви молодець!</value>
   </data>
   <data name="Settings_DestinationBtn_Hint" xml:space="preserve">
     <value>Перейти до сторінки налаштувань</value>
