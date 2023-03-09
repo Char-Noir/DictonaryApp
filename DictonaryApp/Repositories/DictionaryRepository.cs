@@ -209,7 +209,7 @@ namespace DictonaryApp.Repositories
             try
             {
                 Init();
-                var dicts = await conn.Table<WordModel>().ToListAsync();
+                var dicts = await conn.Table<WordModel>().Where(x => x.DictionaryId == id).ToListAsync();
                 return dicts.Select(x => new WordResponceDTO
                 {
                     WordFrom = x.FromWord[..Math.Min(x.FromWord.Length, 12)],
@@ -236,6 +236,7 @@ namespace DictonaryApp.Repositories
                    WordFrom = x.FromWord,
                    WordTo = x.ToWord,
                     Id = x.Id,
+                    IdDictionary = x.DictionaryId
                 };
             }
             catch (Exception ex)
