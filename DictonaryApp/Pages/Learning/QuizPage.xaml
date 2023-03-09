@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DictonaryApp.Pages.Learning.QuizPage"
+              xmlns:localization="clr-namespace:DictonaryApp.Resources.Localization" 
+             Title="{localization:Translate quiz_title}">
+    <FlexLayout Margin="30,30"  Direction="Column">
+        <Label
+                Margin="10"
+                x:Name="ScoreLabel"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="40"
+                HorizontalOptions="Start" />
+        <FlexLayout Direction="Column" FlexLayout.Grow="1">
+            <Label
+                Margin="10"
+                x:Name="LanguageFrom"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Editor x:Name="TextFrom" AutoSize ="TextChanges" IsReadOnly="True" FontSize="40" FontAutoScalingEnabled="True" ></Editor>
+            <Label
+                Margin="10"
+                x:Name="LanguageTo"
+                SemanticProperties.HeadingLevel="Level3"
+                FontSize="20"
+                HorizontalOptions="Center" />
+            <Editor x:Name="TextTo" AutoSize ="TextChanges" IsReadOnly="True" FontSize="40" FontAutoScalingEnabled="True" ></Editor>
+        </FlexLayout>
+        <Button Text="{localization:Translate next_btn}" x:Name="NextBtn" Clicked="OnNextCLicked" Opacity="0" ></Button>
+        <FlexLayout Direction="Row" JustifyContent="End" FlexLayout.Grow="1">
+            <ImageButton
+                x:Name="SuccsessBtn"
+                Source="accept.png"
+                Clicked="OnAcceptClicked"
+                HorizontalOptions="StartAndExpand" 
+                HeightRequest="170"
+                WidthRequest="170"
+                BackgroundColor="LimeGreen"
+                />
+            <ImageButton
+                x:Name="FailBtn"
+                Source="cancel.png"
+                Clicked="OnCancelClicked"
+                HorizontalOptions="StartAndExpand" 
+                HeightRequest="170"
+                WidthRequest="170"
+                BackgroundColor="Red"
+                />
+        </FlexLayout>
+    </FlexLayout>
+</ContentPage>

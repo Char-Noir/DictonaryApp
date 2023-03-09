@@ -32,7 +32,11 @@ public partial class OneDictionaryPage : ContentPage
     {
         await Navigation.PushAsync(new LearningPage(IdDictionary));
     }
-    
+    private async void OnQuizCLicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new QuizPage(IdDictionary));
+    }
+
     protected async override void OnAppearing()
     {
         base.OnAppearing();

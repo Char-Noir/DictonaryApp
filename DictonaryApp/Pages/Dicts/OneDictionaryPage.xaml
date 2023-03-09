@@ -35,7 +35,8 @@
             VerticalOptions="StartAndExpand">
                 <Button Clicked="OnListWordsCLicked" Text="{localization:Translate ListOfWords}"></Button>
                 <Button Clicked="OnLearningCLicked" Text="{localization:Translate Learning_Button}"></Button>
-
+                <Button Clicked="OnQuizCLicked" Text="{localization:Translate quiz_title}"></Button>
+                
             </VerticalStackLayout>
         </ScrollView>
     </StackLayout>
