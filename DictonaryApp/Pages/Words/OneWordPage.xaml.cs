@@ -23,9 +23,12 @@ public partial class OneWordPage : ContentPage
         {
             await Navigation.PopToRootAsync();
         }
+        var OneDictionary = await App.DictionaryRepo.GetOneDictionary(OneWord.IdDictionary);
         TextFrom.Text = OneWord.WordFrom;
         TextTo.Text = OneWord.WordTo;
         ErrorLine.Opacity = 0;
+        LanguageFrom.Text = TranslationLanguageManager.GetLanguageByCode(OneDictionary.LanguageFrom).Name;
+        LanguageTo.Text = TranslationLanguageManager.GetLanguageByCode(OneDictionary.LanguageTo).Name;
     }
     private async void OnEditClicked(object sender, EventArgs e)
     {
