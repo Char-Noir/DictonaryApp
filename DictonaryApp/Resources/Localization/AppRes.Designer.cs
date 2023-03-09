@@ -331,6 +331,24 @@ namespace DictonaryApp.Resources.Localization {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Learning.
+        /// </summary>
+        internal static string Learning_Button {
+            get {
+                return ResourceManager.GetString("Learning_Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn words.
+        /// </summary>
+        internal static string learning_title {
+            get {
+                return ResourceManager.GetString("learning_title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Words.
         /// </summary>
         internal static string ListOfWords {
