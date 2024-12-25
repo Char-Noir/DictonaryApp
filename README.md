@@ -25,6 +25,6 @@ Then you can study the cards using the classical method or take quizzes.
 - [ ] Integration of a translator
 - [ ] Support for more languages
 - [ ] More convenient way to share dictionaries
-- [ ] Possibility to synchronize data
+- [ ] Possibility to synchronize dataghfhgh
 
 Add Scaner Service add new version
