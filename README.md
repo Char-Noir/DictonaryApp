@@ -26,3 +26,5 @@ Then you can study the cards using the classical method or take quizzes.
 - [ ] Support for more languages
 - [ ] More convenient way to share dictionaries
 - [ ] Possibility to synchronize data
+
+Add Some API Configuration
